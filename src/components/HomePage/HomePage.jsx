@@ -7,8 +7,8 @@ function HomePage() {
 
         <section>
             <div className="home-page">
-                <h2>Coffee R Us</h2>
-                <h3>the go to store for your coffee needs</h3>
+                <h2>Shop Ease</h2>
+                <h3>Your one-stop shop for all your needs</h3>
             </div>
 
 

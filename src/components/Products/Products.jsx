@@ -35,7 +35,7 @@ function ProductCard({ name, price, imageUrl, onAddToCart, onUpdateProducts }) {
   return (
     <div className="product-card">
       <img src={imageUrl} alt={name} className="product-image" />
-      <h2 className="product-name">{name}</h2>
+      <h4  className="product-name">{name}</h4>
       <p className="product-price">Kshs.{price}</p>
       <button onClick={() => setIsModalOpen(true)} className="add-to-cart-button">
         Update product
@@ -97,6 +97,7 @@ function ProductCard({ name, price, imageUrl, onAddToCart, onUpdateProducts }) {
                 style={{ boxSizing: 'border-box', width: '100%', padding: '0.75rem 0.85rem', border: '1px solid #cbd5e1', borderRadius: '8px', background: '#fff', color: '#172033', font: 'inherit', fontWeight: 400 }}
               />
             </label>
+
             <label style={{ display: 'grid', gap: '0.45rem', color: '#374151', fontSize: '0.9rem', fontWeight: 600 }}>
               Image URL
               <input

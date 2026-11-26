@@ -3,7 +3,7 @@ import './ShopMain.css';
 import ProductCard from './../Products/Products';
 
 
-function ShopMain({ products: initialProducts = [] }) {
+function ShopMain({ products: initialProducts = [], searchQuery = '' }) {
   const [products, setProducts] = useState(initialProducts);
   const [cartCount, setCartCount] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -39,21 +39,31 @@ function ShopMain({ products: initialProducts = [] }) {
     setCartCount(count => count + 1);
   }
 
+  const query = searchQuery.trim().toLowerCase();
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(query)
+  );
+
   return (
-    <div className="product-list">
-      {loading && <p>Loading products...</p>}
+    <div className="shop-main">
+      <p className="cart-count">Items in cart: {cartCount}</p>
+      <div className="product-list">
+        {loading && <p>Loading products...</p>}
 
-      {error && <p role="status">Could not load products. Showing available sample products.</p>}
+        {error && <p role="status">Could not load products. Showing available sample products.</p>}
 
-      {products.map(product => (
-        <ProductCard
-          key={product.id}
-          name={product.name}
-          price={product.price}
-          imageUrl={product.imageUrl}
-          onAddToCart={handleAddToCart}
-        />
-      ))}
+        {!loading && filteredProducts.length === 0 && <p>No products found.</p>}
+
+        {filteredProducts.map(product => (
+          <ProductCard
+            key={product.id}
+            name={product.name}
+            price={product.price}
+            imageUrl={product.imageUrl}
+            onAddToCart={handleAddToCart}
+          />
+        ))}
+      </div>
     </div>
   );
 }

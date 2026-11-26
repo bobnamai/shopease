@@ -7,6 +7,13 @@
 	transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
+.product-card h4 {
+	margin: 0 0 8px;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: #333;
+}
+
 
 .product-image {
     width: 100%;
