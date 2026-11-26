@@ -1,0 +1,17 @@
+
+
+#shop {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  padding-top: 24px;
+}
+
+@media (max-width: 700px) {
+  #shop {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+}

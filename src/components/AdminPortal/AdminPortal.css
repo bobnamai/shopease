@@ -1,0 +1,61 @@
+.admin-portal {
+	width: min(100% - 2rem, 34rem);
+	margin: clamp(2rem, 8vh, 5rem) auto;
+}
+
+.admin-portal form {
+	display: grid;
+	gap: 0.65rem;
+	padding: clamp(1.25rem, 5vw, 2rem);
+	background: #fff;
+	border: 1px solid #dedbd7;
+	border-radius: 8px;
+	box-shadow: 0 12px 32px rgb(34 27 22 / 8%);
+	text-align: left;
+}
+
+.admin-portal label {
+	margin-top: 0.5rem;
+	color: #302821;
+	font-size: 0.95rem;
+	font-weight: 600;
+}
+
+.admin-portal input {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 2.75rem;
+	padding: 0.65rem 0.75rem;
+	border: 1px solid #c9c4be;
+	border-radius: 4px;
+	background: #fff;
+	color: #211d19;
+	font: inherit;
+}
+
+.admin-portal input:focus-visible {
+	border-color: #70452d;
+	outline: 3px solid rgb(112 69 45 / 22%);
+	outline-offset: 1px;
+}
+
+.admin-portal button {
+	min-height: 2.75rem;
+	margin-top: 0.75rem;
+	border: 0;
+	border-radius: 4px;
+	background: #70452d;
+	color: #fff;
+	font: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.admin-portal button:hover {
+	background: #563522;
+}
+
+.admin-portal button:focus-visible {
+	outline: 3px solid rgb(112 69 45 / 35%);
+	outline-offset: 2px;
+}
